@@ -2,13 +2,13 @@ function getFontInfo () {
     var anchorNode = window.getSelection().anchorNode
 
     if (!anchorNode) {
-        return "请先选中字体！"
+        return alert("请先选中字体！")
     }
 
     var parent = anchorNode.parentNode
 
     if (!parent) {
-        return "选中错误！"
+        return alert("选中错误！")
     }
 
     var attrMap = window.getComputedStyle(parent)
@@ -40,13 +40,8 @@ function getFontInfo () {
         msg += el.name + el.value + '\n'
     })
 
-    
 
-    return {
-        code: 0,
-        data: attrs,
-        msg: msg
-    }
+    alert(msg)
 }
 
 

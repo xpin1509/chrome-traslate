@@ -14,11 +14,11 @@ chrome.contextMenus.create({
                 info: '点击了'
             }
             chrome.tabs.sendMessage(tabs[0].id, message, res => {
-                if (res.code === 0) {
-                    alert(res.msg || '')
-                } else {
-                    alert(res)
-                }
+                // if (res.code === 0) {
+                //     alert(res.msg || '')
+                // } else {
+                //     alert(res)
+                // }
             })
         })
     } 
