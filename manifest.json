@@ -1,19 +1,25 @@
 {
 	"manifest_version": 2,
-	"name": "简单的谷歌翻译",
+	"name": "字体查看",
 	"version": "1.0.0",
 
-	"description": "跳转翻译",
+	"description": "查看字体详情",
 
 	"background": {
 		"scripts": ["background.js"]
 	},
+	"content_scripts": [ 
+		{ 
+			"js": [ "inject.js" ], 
+			"matches": [ "http://*/*", "https://*/*" ]
+		} 
+	],
 	"permissions": [
 		"contextMenus"
 	],
 	"icons": {
-		"16": "image/international.png",
-		"48": "image/international.png",
-		"128": "image/international.png"
+		"16": "image/font.png",
+		"48": "image/font.png",
+		"128": "image/font.png"
 	}
 }
